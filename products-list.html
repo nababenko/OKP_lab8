@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofas</title>
+
+    <link rel="stylesheet" href="products-list.css">
+    <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/86b7756615.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="header_menu" id="head_div">
+            <div class="dropdown">
+                <button class="menu_button">MENU</button>
+                <div class="dropdown-content">
+                    <a href="index.html">MAIN PAGE</a>
+                    <a href="categories.html">CATEGORIES</a>
+                    <a href="product.html">PRODUCT</a>
+                    <a href="find_store.html">SHOP IN STORE</a>
+                    <a href="#footer">CONTACTS</a>
+                </div>
+            </div>
+
+            <div class="spacer">
+                <input type="text" placeholder="What are you searching for?">
+            </div>
+
+            <div class="header-buttons">
+                <div class="btn-wrapper">
+                    <button class="b_button" data-behavior="showLikes">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <ul class="modal-list" id="likes-list"></ul>
+                </div>
+
+                <div class="btn-wrapper">
+                    <button class="b_button" data-behavior="showCart">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </button>
+                    <ul class="modal-list" id="cart-list"></ul>
+                </div>
+
+                <button class="b_button"><i class="fa-regular fa-user"></i></button>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="space"></div>
+<section id="controls" >
+    <div class="control">6 Results</div>
+    <div class="control">VIEW</div>
+    <div class="view-options">
+        <button title="Grid view"><i class="fa-solid fa-grip-vertical"></i></button>
+        <button title="List view"><i class="fa-solid fa-grip"></i></button>
+    </div>
+    <div class="control">
+        <label for="sort">SORT BY</label>
+        <select id="sort" class="sort-select">
+            <option value="name-asc">Name A-Z</option>
+            <option value="name-desc">Name Z-A</option>
+            <option value="price-asc">Price Low to High</option>
+            <option value="price-desc">Price High to Low</option>
+        </select>
+    </div>
+</section>
+
+<section id="wrapper">
+    <aside>
+        <span style="float: right; padding-top: 25px">clear all</span>
+        <h2>Filters</h2>
+        <hr>
+        <div class="filter-group">
+            <p>Color<span class="span-button"><button onclick="toggleFilterAttr('color-options')">+</button></span></p>
+            <ul id="color-options" class="filter-options">
+                <li><label><input type="checkbox"> White</label></li>
+                <li><label><input type="checkbox"> Beige</label></li>
+                <li><label><input type="checkbox"> Grey</label></li>
+            </ul>
+        </div>
+
+        <div class="filter-group">
+            <p>Price<span class="span-button"><button id="price-button">+</button></span></p>
+            <div id="price-options" class="filter-options">
+                <label><input type="checkbox"> $0 - $1000</label><br>
+                <label><input type="checkbox"> $1000 - $3000</label>
+            </div>
+        </div>
+
+        <div class="filter-group">
+            <p>Brand<span class="span-button"><button id="brand-button">+</button></span></p>
+            <div id="brand-options" class="filter-options">
+                <label><input type="checkbox"> Brand 1</label><br>
+                <label><input type="checkbox"> Brand 2</label><br>
+                <label><input type="checkbox"> Brand 3</label>
+            </div>
+        </div>
+    </aside>
+    <div class="product_wrapper">
+
+            <div class="product">
+                <span class="reaction">
+                    <button class="like" data-action="like"><i class="fa-regular fa-heart"></i></button>
+                    <button class="bucket" data-action="addToCart"><i class="fa-solid fa-basket-shopping"></i></button>
+                </span>
+                <img src="resources/sofa.png" alt="sofa">
+                <p class="designer">Designer</p>
+                <p class="name">Float Sofa <span class="rights">1000$</span></p>
+            </div>
+
+            <div class="product" style="border-right: 1px solid #646056;border-left: 1px solid #646056;">
+                <span class="reaction">
+                    <button class="like" data-action="like"><i class="fa-regular fa-heart"></i></button>
+                    <button class="bucket" data-action="addToCart"><i class="fa-solid fa-basket-shopping"></i></button>
+                </span>
+                <img src="resources/sofa%20(3).png" alt="Bookends">
+                <p class="designer">Designer</p>
+                <p class="name">Quilton Lift Sofa <span class="rights">1000$</span></p>
+            </div>
+
+            <div class="product">
+                <span class="reaction">
+                    <button class="like" data-action="like"><i class="fa-regular fa-heart"></i></button>
+                    <button class="bucket" data-action="addToCart"><i class="fa-solid fa-basket-shopping"></i></button>
+                </span>
+                <img src="resources/sofa%20(2).png" alt="Bed">
+                <p class="designer">Designer</p>
+                <p class="name">Muse Sofa <span class="rights">1000$</span></p>
+            </div>
+        <div id="line"></div>
+
+        <div class="product">
+            <span class="reaction">
+                <button class="like" data-action="like"><i class="fa-regular fa-heart"></i></button>
+                <button class="bucket" data-action="addToCart"><i class="fa-solid fa-basket-shopping"></i></button>
+            </span>
+            <img src="resources/sofa%20(1).png" alt="sofa">
+            <p class="designer">Designer</p>
+            <p class="name">Kelston Sofa<span class="rights">1000$</span></p>
+        </div>
+
+        <div class="product" style="border-right: 1px solid #646056;border-left: 1px solid #646056;">
+            <span class="reaction">
+                <button class="like" data-action="like"><i class="fa-regular fa-heart"></i></button>
+                <button class="bucket" data-action="addToCart"><i class="fa-solid fa-basket-shopping"></i></button>
+            </span>
+            <img src="resources/sofa%20(4).png" alt="Bookends">
+            <p class="designer">Designer</p>
+            <p class="name">Como Sofa <span class="rights">1000$</span></p>
+        </div>
+
+        <div class="product">
+            <span class="reaction">
+                <button class="like" data-action="like"><i class="fa-regular fa-heart"></i></button>
+                <button class="bucket" data-action="addToCart"><i class="fa-solid fa-basket-shopping"></i></button>
+            </span>
+            <img src="resources/sofa%20(5).png" alt="Bed">
+            <p class="designer">Designer</p>
+            <p class="name">Kiral Sofa <span class="rights">1000$</span></p>
+        </div>
+    </div>
+</section>
+    <div class="theme-menu">
+        <button class="theme-button" data-theme="light">Light Theme</button>
+        <button class="theme-button" data-theme="dark">Dark Theme</button>
+        <button class="theme-button" data-theme="contrast">High Contrast</button>
+    </div>
+</main>
+
+<footer id="footer">
+    <p>For any inquiries or assistance, feel free to reach out to us using the contact information below</p>
+    <div class="footer_info">
+        <div class="contacts">
+            <p class="number">+1 000 000 00 00</p>
+            <p class="email">te_contactUs@mail.com</p>
+            <p class="address">Mar Vista 12928 Venice Blvd. Chicago, CA 9066</p>
+        </div>
+        <div class="links">
+            <i class="fa-brands fa-instagram"></i><a id="inst" href="https://www.instagram.com/p/DHKXAFzN8vr/" target="_blank">INSTAGRAM</a><br>
+            <i class="fa-brands fa-pinterest"></i><a id="pint" href="???" target="_blank">PINTEREST</a><br>
+            <i class="fa-brands fa-facebook"></i><a id="facebook" href="https://www.facebook.com/reel/3908534479408058" target="_blank">FACEBOOK</a>
+        </div>
+    </div>
+    <p class="rights-info">© 2025 Babenko company. All rights reserved.</p>
+</footer>
+</body>
+<script src="products-list.js"></script>
+</html>

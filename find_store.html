@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find a store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="map" style="display: flex">
+       <a href="resources/location.jpg" target="_blank"><img src="resources/location.jpg" width="200"></a>
+        <div class="shop_info" style="align-content: center; margin-left: 24px">
+            <h2>SHOP IN STORE</h2>
+            <p>Shop in-store at our convenient location in Chicago and explore our wide range of quality furniture pieces firsthand.</p>
+        </div>
+    </section>
+    <section>
+        <button onclick="dialogWithUser()">Пошук магазину</button>
+        <button onclick="showDeveloperInfo('Бабенко', 'Анастасія')">Про розробника</button>
+        <button onclick="compareStrings()">Порівняти рядки</button>
+        <p>Чи була корисна вам ця інформація?</p>
+        <button onclick="HelpBtn()">Так</button>
+
+
+    </section>
+</body>
+<script>
+    function HelpBtn(){
+            let name = prompt("Введіть своє ім'я", "Ім'я");
+            if(name){
+                if(confirm("Для продовження натисніть ОК"))
+                alert(`Вітаємо ${name}. Ми завжди будемо раді вас бачити!`);
+            }else{
+                alert("Ви не ввели ім'я");
+            }
+    }
+</script>
+<script src="script.js"></script>
+</html>
