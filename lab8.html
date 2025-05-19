@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>te Furniture</title>
+
+  <link rel="stylesheet" href="lab8.css"><link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/86b7756615.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<header>
+  <nav>
+    <div class="header_menu" id="head_div">
+      <div class="dropdown">
+        <button class="menu_button">MENU</button>
+        <div class="dropdown-content">
+          <a href="index.html">MAIN PAGE</a>
+          <a href="categories.html">CATEGORIES</a>
+          <a href="product.html">PRODUCT</a>
+          <a href="find_store.html">SHOP IN STORE</a>
+          <a href="#footer">CONTACTS</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="container">
+    <div class="furniture-panel">
+      <h2>Furniture</h2>
+      <div class="furniture-items">
+        <div class="furniture-item" draggable="true" data-type="chair">
+          <img src="resources/furniture%20(3).png" alt="Chair">
+          <span>Chair</span>
+        </div>
+        <div class="furniture-item" draggable="true" data-type="table">
+          <img src="resources/furniture%20(4).png" alt="Table">
+          <span>Table</span>
+        </div>
+        <div class="furniture-item" draggable="true" data-type="sofa">
+          <img src="resources/furniture%20(1).png" alt="Sofa">
+          <span>Sofa</span>
+        </div>
+        <div class="furniture-item" draggable="true" data-type="bed">
+          <img src="resources/furniture%20(2).png" alt="Bed">
+          <span>Bed</span>
+        </div>
+        <div class="furniture-item" draggable="true" data-type="wardrobe">
+          <img src="resources/Screenshot%202025-05-20%20000415.png" alt="Shelves">
+          <span>Shelves</span>
+        </div>
+        <div class="furniture-item" draggable="true" data-type="lamp">
+          <img src="resources/furniture%20(5).png" alt="Lamp">
+          <span>Lamp</span>
+        </div>
+      </div>
+  </div>
+
+  <div class="room" id="room">
+    <h2>My room</h2>
+  </div>
+  </div>
+</main>
+
+<footer>
+  <div class="instructions">
+    <h3>How to use:</h3>
+    <ul>
+      <li>Drag item into the room</li>
+      <li>Furniture in the room can be freely moved</li>
+      <li>Hover over the furniture in the room to see the delete button</li>
+      <li>Click the delete button (✕) to remove the furniture from the room</li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+<script src="lab8.js"></script>
+</html>
